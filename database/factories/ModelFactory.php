@@ -22,3 +22,10 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+// Create dummy data for to_dos table
+$factory->define(App\ToDo::class, function (Faker\Generator $faker){
+    return [
+        'to_do' => $faker->sentence(10)
+    ];
+});

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class ToDosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Runs the ToDosTable Seeder
-        $this->call(ToDosTableSeeder::Class);
+        // Create 7 rows of dummy data
+        factory(App\ToDo::class, 7)->create();
     }
 }
