@@ -14,5 +14,15 @@ class ToDoController extends Controller
         return view('todo', compact('todo_data'));
     }
 
+    public function store(Request $request){
+        //Create an instance of to_dos table
+        $to_do_instance = new ToDo;
+        //insert input from post to instance
+        $to_do_instance->to_do = $request->todo;
+        // Save inserts the record into database
+        $to_do_instance->save();
+        return redirect()->back();
+    }
+
 
 }
