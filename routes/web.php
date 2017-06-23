@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/new','PagesController@newView');
+
+Route::get('/todo', 'ToDoController@index');
